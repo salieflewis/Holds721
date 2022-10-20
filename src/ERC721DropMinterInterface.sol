@@ -12,5 +12,7 @@ interface ERC721DropMinterInterface {
 
     function setApprovalForAll(address operator, bool approved) external returns (bool);
 
+    function totalSupply() external returns (uint256);
+
 
 }
