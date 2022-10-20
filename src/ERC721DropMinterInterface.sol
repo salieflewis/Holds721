@@ -9,4 +9,8 @@ interface ERC721DropMinterInterface {
     function hasRole(bytes32, address) external returns (bool);
 
     function isAdmin(address) external returns (bool);
+
+    function setApprovalForAll(address operator, bool approved) external returns (bool);
+
+
 }

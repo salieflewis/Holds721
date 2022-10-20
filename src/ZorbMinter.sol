@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "openzeppelin-contracts/token/ERC721/ERC721.sol";
+import "openzeppelin-contracts/token/ERC721/IERC721.sol";
 
 contract ZorbMinter {
     // ===== ERRORS =====
@@ -10,11 +11,11 @@ contract ZorbMinter {
 
     // ===== CONSTANTS =====
     bytes32 public immutable MINTER_ROLE = keccak256("MINTER");
-    address public immutable ZORB_ADDRESS = 0xCa21d4228cDCc68D4e23807E5e370C07577Dd152;
+    IERC721 public immutable ZORB_ADDRESS = IERC721(0xCa21d4228cDCc68D4e23807E5e370C07577Dd152);
 
     // ===== PUBLIC VARIABLES =====
     uint256 public priceInZorbs;
-    uint256 public amountOfZorbsHeld;
+    // uint256 public amountOfZorbsHeld;
     uint256[] public specificZorbsHeld;
 
     // ===== CONSTRUCTOR =====
@@ -23,13 +24,15 @@ contract ZorbMinter {
     }
 
     function mintWithZorbs() external payable {
-        amountOfZorbsHeld = ZORB_ADDRESS.balanceOf(msg.sender);
 
-        if (!amountOfZorbsHeld >= priceInZorbs) {
+        if ( priceInZorbs > ZORB_ADDRESS.balanceOf(msg.sender) ) {
             revert NotEnoughZorbs();
         }
 
-        (bool success,) = ZORB_ADDRESS.setApprovalForAll();
+        (bool success,) = ZORB_ADDRESS.setApprovalForAll(
+            address(this), 
+            true // 
+        );
 
         if (!success) {
             revert ZorbsUnapproved();
