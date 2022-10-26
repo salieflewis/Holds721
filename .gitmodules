@@ -7,3 +7,6 @@
 [submodule "lib/zora-drops-contracts"]
 	path = lib/zora-drops-contracts
 	url = https://github.com/ourzora/zora-drops-contracts
+[submodule "lib/zorb"]
+	path = lib/zorb
+	url = https://github.com/ourzora/zorb
