@@ -8,4 +8,4 @@ forge-std/=lib/forge-std/src/
 openzeppelin-contracts-upgradeable/=lib/zora-drops-contracts/lib/openzeppelin-contracts-upgradeable/
 openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/
 zora-drops-contracts/=lib/zora-drops-contracts/src/
-zorb/=lib/zorb/
+zorb/=lib/zorb/packages/zorb-contracts/contracts
