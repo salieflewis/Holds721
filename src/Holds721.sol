@@ -1,43 +1,36 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.10;
+pragma solidity 0.8.17;
 
-// import "openzeppelin-contracts/token/ERC721/ERC721.sol";
-import "zorb/ZorbNFT.sol";
 import "./ERC721DropMinterInterface.sol";
 
-contract ZorbMinter {
+contract Holds721 {
     // ===== ERRORS =====
     /// @notice Action is unable to complete because msg.value is incorrect
-    error WrongPrice();
+    error NotAHolder();
     error MinterNotAuthorized();
     error TransferUnsuccessful();
 
     // ===== CONSTANTS =====
     bytes32 public immutable MINTER_ROLE = keccak256("MINTER");
-    ZorbNFT public immutable ZORB_ADDRESS = ZorbNFT(0xCa21d4228cDCc68D4e23807E5e370C07577Dd152);
 
     // ===== PUBLIC VARIABLES =====
-    uint256 public priceInZorbs;
-    uint256 public priceInEth;
+    address public immutable ADDRESS_OF_721;
 
     // ===== CONSTRUCTOR =====
-    constructor(uint256 _priceInZorbs, uint256 _priceInEth) {
-        priceInZorbs = _priceInZorbs;
-        priceInEth = _priceInEth;
+    constructor(address _ADDRESS_OF_721) {
+        ADDRESS_OF_721 = _ADDRESS_OF_721;
     }
 
     // ===== FUNCTIONS =====
-    function mintWithZorbs(address zoraDrop, address mintRecipient, uint256 quantity) external payable {
-        // Check if ZorbMinter.sol has MINTER_ROLE on target zoraDrop contract
+    function mintWith721(address zoraDrop, address mintRecipient, uint256 quantity) external payable {
+        // Check if Holds721.sol has MINTER_ROLE on target zoraDrop contract
         if (!ERC721DropMinterInterface(zoraDrop).hasRole(MINTER_ROLE, address(this))) {
             revert MinterNotAuthorized();
         }
 
-        // If msg.sender doesn't have enough Zorbs, they have to pay priceInEth
-        if (priceInZorbs > ZORB_ADDRESS.balanceOf(msg.sender)) {
-            if (msg.value != priceInEth) {
-                revert WrongPrice();
-            }
+        // If msg.sender holds less than one Zorb, they cannot mint
+        if (ADDRESS_OF_721.balanceOf(msg.sender) == 0) {
+            revert NotAHolder();
 
             ERC721DropMinterInterface(zoraDrop).adminMint(mintRecipient, quantity);
 
