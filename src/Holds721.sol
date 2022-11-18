@@ -3,8 +3,9 @@ pragma solidity 0.8.17;
 
 import "./ERC721DropMinterInterface.sol";
 import "solmate/tokens/ERC721.sol";
+import "openzeppelin-contracts/security/ReentrancyGuard.sol";
 
-contract Holds721 {
+contract Holds721 is ReentrancyGuard {
     // ===== ERRORS =====
     error NotAHolder();
     error MinterNotAuthorized();
@@ -22,7 +23,7 @@ contract Holds721 {
     }
 
     // ===== FUNCTIONS =====
-    function mintWith721(address zoraDrop, address mintRecipient, uint256 quantity) external payable {
+    function mintWith721(address zoraDrop, address mintRecipient, uint256 quantity) external payable nonReentrant {
         // Check if Holds721.sol has MINTER_ROLE on target zoraDrop contract
         if (!ERC721DropMinterInterface(zoraDrop).hasRole(MINTER_ROLE, address(this))) {
             revert MinterNotAuthorized();

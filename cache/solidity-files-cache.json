@@ -52,7 +52,7 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "Script": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Script.sol/Script.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Script.sol/Script.json"
         }
       }
     },
@@ -94,63 +94,7 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "stdJson": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "StdJson.sol/stdJson.json"
-        }
-      }
-    },
-    "lib/forge-std/src/Test.sol": {
-      "lastModificationDate": 1666202224933,
-      "contentHash": "6cab65c53a9548c2428a10697fd06dd1",
-      "sourceName": "lib/forge-std/src/Test.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/src/Script.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/zora-drops-contracts/lib/ds-test/src/test.sol"
-      ],
-      "versionRequirement": ">=0.6.0, <0.9.0",
-      "artifacts": {
-        "Test": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Test.sol/Test.json"
-        },
-        "stdError": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Test.sol/stdError.json"
-        },
-        "stdMath": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Test.sol/stdMath.json"
-        },
-        "stdStorage": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Test.sol/stdStorage.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "StdJson.sol/stdJson.json"
         }
       }
     },
@@ -190,7 +134,7 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "Vm": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Vm.sol/Vm.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Vm.sol/Vm.json"
         }
       }
     },
@@ -230,7 +174,7 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "console.sol/console.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "console.sol/console.json"
         }
       }
     },
@@ -270,14 +214,14 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console2": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "console2.sol/console2.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "console2.sol/console2.json"
         }
       }
     },
-    "lib/zora-drops-contracts/lib/ds-test/src/test.sol": {
-      "lastModificationDate": 1666285624072,
-      "contentHash": "5d45a46528eaf8a26f0a8d93669f3148",
-      "sourceName": "lib/zora-drops-contracts/lib/ds-test/src/test.sol",
+    "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1668738600320,
+      "contentHash": "ee1cd296e049da9a26bdb08e23a9036a",
+      "sourceName": "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -307,17 +251,17 @@
         }
       },
       "imports": [],
-      "versionRequirement": ">=0.4.23",
+      "versionRequirement": "^0.8.0",
       "artifacts": {
-        "DSTest": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "test.sol/DSTest.json"
+        "ReentrancyGuard": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ReentrancyGuard.sol/ReentrancyGuard.json"
         }
       }
     },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1666285624836,
-      "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+    "lib/solmate/src/tokens/ERC721.sol": {
+      "lastModificationDate": 1668737214461,
+      "contentHash": "ecc06cefc5404b9e1adbc2e459d5757e",
+      "sourceName": "lib/solmate/src/tokens/ERC721.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -346,575 +290,21 @@
           "libraries": {}
         }
       },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol"
-      ],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "Ownable": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Ownable.sol/Ownable.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1666285624884,
-      "contentHash": "3e6da5fac5e126521994a15fc93be213",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
-      ],
-      "versionRequirement": "^0.8.0",
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
       "artifacts": {
         "ERC721": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ERC721.sol/ERC721.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1666285624884,
-      "contentHash": "27d219ec6f69478d065fdbfa7931da68",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
-      ],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "IERC721": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "IERC721.sol/IERC721.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1666285624884,
-      "contentHash": "4a42975c8e0c64414a9462122137e990",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "IERC721Receiver": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "IERC721Receiver.sol/IERC721Receiver.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1666285624886,
-      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
-      ],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "IERC721Metadata": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "IERC721Metadata.sol/IERC721Metadata.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
-      "lastModificationDate": 1666285624890,
-      "contentHash": "ad714a6368ee7d43cded6bbe8af0b155",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.1",
-      "artifacts": {
-        "Address": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Address.sol/Address.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
-      "lastModificationDate": 1666285624890,
-      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "Context": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Context.sol/Context.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Counters.sol": {
-      "lastModificationDate": 1666285624891,
-      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Counters.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "Counters": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Counters.sol/Counters.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1666285624892,
-      "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "Strings": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Strings.sol/Strings.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1666285624894,
-      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
-      ],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "ERC165": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ERC165.sol/ERC165.json"
-        }
-      }
-    },
-    "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1666285624895,
-      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
-      "sourceName": "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.0",
-      "artifacts": {
-        "IERC165": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "IERC165.sol/IERC165.json"
-        }
-      }
-    },
-    "lib/zorb/packages/zorb-contracts/contracts/ColorLib.sol": {
-      "lastModificationDate": 1666742827720,
-      "contentHash": "1d5b0954d7ce8cbf7f4a45ba9c403fd6",
-      "sourceName": "lib/zorb/packages/zorb-contracts/contracts/ColorLib.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol"
-      ],
-      "versionRequirement": "=0.8.10",
-      "artifacts": {
-        "ColorLib": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ColorLib.sol/ColorLib.json"
-        }
-      }
-    },
-    "lib/zorb/packages/zorb-contracts/contracts/IPublicSharedMetadata.sol": {
-      "lastModificationDate": 1666743059537,
-      "contentHash": "309e017aa43b73fa34861249842edca7",
-      "sourceName": "lib/zorb/packages/zorb-contracts/contracts/IPublicSharedMetadata.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.6",
-      "artifacts": {
-        "IPublicSharedMetadata": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "IPublicSharedMetadata.sol/IPublicSharedMetadata.json"
-        }
-      }
-    },
-    "lib/zorb/packages/zorb-contracts/contracts/ZorbNFT.sol": {
-      "lastModificationDate": 1666743072051,
-      "contentHash": "f5b43d2db6bd144cc088cc46ce334632",
-      "sourceName": "lib/zorb/packages/zorb-contracts/contracts/ZorbNFT.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Counters.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/ColorLib.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/IPublicSharedMetadata.sol"
-      ],
-      "versionRequirement": "=0.8.10",
-      "artifacts": {
-        "INFT": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ZorbNFT.sol/INFT.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721.sol/ERC721.json"
         },
-        "ZorbNFT": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ZorbNFT.sol/ZorbNFT.json"
+        "ERC721TokenReceiver": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
         }
       }
     },
-    "script/Counter.s.sol": {
-      "lastModificationDate": 1666288247718,
-      "contentHash": "ac0880bd9ef3ba1de9a403094754fb11",
-      "sourceName": "script/Counter.s.sol",
+    "script/Holds721.s.sol": {
+      "lastModificationDate": 1668737864486,
+      "contentHash": "80bd0f8d295f495471ba517480e54572",
+      "sourceName": "script/Holds721.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -948,18 +338,22 @@
         "lib/forge-std/src/StdJson.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol"
+        "lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "src/ERC721DropMinterInterface.sol",
+        "src/Holds721.sol"
       ],
       "versionRequirement": "^0.8.0",
       "artifacts": {
-        "CounterScript": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Counter.s.sol/CounterScript.json"
+        "DeployScript": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Holds721.s.sol/DeployScript.json"
         }
       }
     },
     "src/ERC721DropMinterInterface.sol": {
-      "lastModificationDate": 1666742278454,
-      "contentHash": "f98a2b78a5358cd49afceade2953e298",
+      "lastModificationDate": 1668736024486,
+      "contentHash": "21418ddd9264e7f1866f6c7eadab19e6",
       "sourceName": "src/ERC721DropMinterInterface.sol",
       "solcConfig": {
         "settings": {
@@ -990,17 +384,17 @@
         }
       },
       "imports": [],
-      "versionRequirement": "=0.8.10",
+      "versionRequirement": "=0.8.17",
       "artifacts": {
         "ERC721DropMinterInterface": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ERC721DropMinterInterface.sol/ERC721DropMinterInterface.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721DropMinterInterface.sol/ERC721DropMinterInterface.json"
         }
       }
     },
-    "src/ZorbMinter.sol": {
-      "lastModificationDate": 1666743125650,
-      "contentHash": "4aa9864462059dea57b82e51d8e1d4d1",
-      "sourceName": "src/ZorbMinter.sol",
+    "src/Holds721.sol": {
+      "lastModificationDate": 1668738693023,
+      "contentHash": "c4d865ba7ef55a6329186eb0b100e078",
+      "sourceName": "src/Holds721.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1030,90 +424,14 @@
         }
       },
       "imports": [
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Counters.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/ColorLib.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/IPublicSharedMetadata.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/ZorbNFT.sol",
+        "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
         "src/ERC721DropMinterInterface.sol"
       ],
-      "versionRequirement": "=0.8.10",
+      "versionRequirement": "=0.8.17",
       "artifacts": {
-        "ZorbMinter": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ZorbMinter.sol/ZorbMinter.json"
-        }
-      }
-    },
-    "test/ZorbMinter.t.sol": {
-      "lastModificationDate": 1666742273278,
-      "contentHash": "89104c13fe377428713ee383e9e6d471",
-      "sourceName": "test/ZorbMinter.t.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/src/Script.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/Test.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/zora-drops-contracts/lib/ds-test/src/test.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Context.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Counters.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-        "lib/zora-drops-contracts/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/ColorLib.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/IPublicSharedMetadata.sol",
-        "lib/zorb/packages/zorb-contracts/contracts/ZorbNFT.sol",
-        "src/ERC721DropMinterInterface.sol",
-        "src/ZorbMinter.sol"
-      ],
-      "versionRequirement": "=0.8.10",
-      "artifacts": {
-        "ZorbMinterTest": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ZorbMinter.t.sol/ZorbMinterTest.json"
+        "Holds721": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Holds721.sol/Holds721.json"
         }
       }
     }
