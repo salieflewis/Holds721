@@ -1,1 +1,1 @@
-Extension to the Zora drops contracts that enables a minter to mint for free if they hold a certain amount of Zorbs.
+Allows holders of a specified NFT to mint a ZORA drop for free.
