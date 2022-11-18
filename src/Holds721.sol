@@ -2,10 +2,10 @@
 pragma solidity 0.8.17;
 
 import "./ERC721DropMinterInterface.sol";
+import "solmate/tokens/ERC721.sol";
 
 contract Holds721 {
     // ===== ERRORS =====
-    /// @notice Action is unable to complete because msg.value is incorrect
     error NotAHolder();
     error MinterNotAuthorized();
     error TransferUnsuccessful();
@@ -14,10 +14,10 @@ contract Holds721 {
     bytes32 public immutable MINTER_ROLE = keccak256("MINTER");
 
     // ===== PUBLIC VARIABLES =====
-    address public immutable ADDRESS_OF_721;
+    ERC721 public ADDRESS_OF_721;
 
     // ===== CONSTRUCTOR =====
-    constructor(address _ADDRESS_OF_721) {
+    constructor(ERC721 _ADDRESS_OF_721) {
         ADDRESS_OF_721 = _ADDRESS_OF_721;
     }
 
@@ -28,20 +28,18 @@ contract Holds721 {
             revert MinterNotAuthorized();
         }
 
-        // If msg.sender holds less than one Zorb, they cannot mint
+        // If msg.sender does not hold the specified NFT, they cannot mint
         if (ADDRESS_OF_721.balanceOf(msg.sender) == 0) {
             revert NotAHolder();
-
-            ERC721DropMinterInterface(zoraDrop).adminMint(mintRecipient, quantity);
-
-            // Transfer funds to target zoraDrop contract
-            (bool success,) = zoraDrop.call{value: msg.value}("");
-            if (!success) {
-                revert TransferUnsuccessful();
-            }
         }
 
-        // If msg.sender has enough Zorbs, they can mint for free
+        // If msg.sender holds the specified NFT, they can mint for free
         ERC721DropMinterInterface(zoraDrop).adminMint(mintRecipient, quantity);
+
+        // Transfer funds to zora drop contract
+        (bool success,) = zoraDrop.call{value: msg.value}("");
+        if (!success) {
+            revert TransferUnsuccessful();
+        }
     }
 }
