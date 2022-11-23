@@ -3,9 +3,9 @@ pragma solidity 0.8.17;
 
 import "./ERC721DropMinterInterface.sol";
 import "solmate/tokens/ERC721.sol";
-import "openzeppelin-contracts/security/ReentrancyGuard.sol";
+import "openzeppelin-contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
 
-contract Holds721 is ReentrancyGuard {
+contract Holds721 is ReentrancyGuardUpgradeable {
     // ===== ERRORS =====
     error NotAHolder();
     error MinterNotAuthorized();
