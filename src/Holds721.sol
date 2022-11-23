@@ -17,9 +17,10 @@ contract Holds721 is ReentrancyGuardUpgradeable {
     // ===== PUBLIC VARIABLES =====
     ERC721 public ADDRESS_OF_721;
 
-    // ===== CONSTRUCTOR =====
-    constructor(ERC721 _ADDRESS_OF_721) {
+    // ===== INITIALIZER =====
+    function initialize(ERC721 _ADDRESS_OF_721) external initializer {
         ADDRESS_OF_721 = _ADDRESS_OF_721;
+        __ReentrancyGuard_init();
     }
 
     // ===== FUNCTIONS =====
