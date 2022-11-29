@@ -4,8 +4,9 @@ pragma solidity 0.8.17;
 import "./ERC721DropMinterInterface.sol";
 import "solmate/tokens/ERC721.sol";
 import "openzeppelin-contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
+import "openzeppelin-contracts-upgradeable/access/OwnableUpgradeable.sol";
 
-contract Holds721 is ReentrancyGuardUpgradeable {
+contract Holds721 is OwnableUpgradeable, ReentrancyGuardUpgradeable {
     // ===== ERRORS =====
     error NotAHolder();
     error MinterNotAuthorized();
@@ -20,6 +21,7 @@ contract Holds721 is ReentrancyGuardUpgradeable {
     // ===== INITIALIZER =====
     function initialize(ERC721 _ADDRESS_OF_721) external initializer {
         ADDRESS_OF_721 = _ADDRESS_OF_721;
+        __Ownable_init();
         __ReentrancyGuard_init();
     }
 
