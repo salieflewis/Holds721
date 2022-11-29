@@ -16,11 +16,11 @@ contract Holds721 is OwnableUpgradeable, ReentrancyGuardUpgradeable {
     bytes32 public immutable MINTER_ROLE = keccak256("MINTER");
 
     // ===== PUBLIC VARIABLES =====
-    ERC721 public ADDRESS_OF_721;
+    ERC721 public addressOf721;
 
     // ===== INITIALIZER =====
-    function initialize(ERC721 _ADDRESS_OF_721) external initializer {
-        ADDRESS_OF_721 = _ADDRESS_OF_721;
+    function initialize(ERC721 _addressOf721) external initializer {
+        addressOf721 = _addressOf721;
         __Ownable_init();
         __ReentrancyGuard_init();
     }
@@ -33,7 +33,7 @@ contract Holds721 is OwnableUpgradeable, ReentrancyGuardUpgradeable {
         }
 
         // If msg.sender does not hold the specified NFT, they cannot mint
-        if (ADDRESS_OF_721.balanceOf(msg.sender) == 0) {
+        if (addressOf721.balanceOf(msg.sender) == 0) {
             revert NotAHolder();
         }
 
